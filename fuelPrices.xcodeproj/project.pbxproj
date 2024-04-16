@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3A316C72BCD3DEF0027C60D /* fuelPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C62BCD3DEF0027C60D /* fuelPricesApp.swift */; };
+		E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */; };
 		E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C82BCD3DEF0027C60D /* ContentView.swift */; };
 		E3A316CB2BCD3DF00027C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CA2BCD3DF00027C60D /* Assets.xcassets */; };
 		E3A316CF2BCD3DF00027C60D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CE2BCD3DF00027C60D /* Preview Assets.xcassets */; };
 		E3A316D92BCD3DF00027C60D /* fuelPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */; };
 		E3A316E32BCD3DF00027C60D /* fuelPricesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316E22BCD3DF00027C60D /* fuelPricesUITests.swift */; };
 		E3A316E52BCD3DF00027C60D /* fuelPricesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316E42BCD3DF00027C60D /* fuelPricesUITestsLaunchTests.swift */; };
-		E3A316F52BCD3EA30027C60D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F42BCD3EA30027C60D /* APIService.swift */; };
-		E3A316F72BCD3EEC0027C60D /* stationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F62BCD3EEC0027C60D /* stationStructure.swift */; };
-		E3A316FA2BCE6EB40027C60D /* fuelProviderDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F92BCE6EB40027C60D /* fuelProviderDict.swift */; };
+		E3A316F52BCD3EA30027C60D /* StationDataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F42BCD3EA30027C60D /* StationDataGetter.swift */; };
+		E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */; };
+		E3A316FA2BCE6EB40027C60D /* FuelProviderDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */; };
+		E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */; };
+		E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */; };
+		E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		E3A316C32BCD3DEF0027C60D /* fuelPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fuelPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3A316C62BCD3DEF0027C60D /* fuelPricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelPricesApp.swift; sourceTree = "<group>"; };
+		E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricesApp.swift; sourceTree = "<group>"; };
 		E3A316C82BCD3DEF0027C60D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3A316CA2BCD3DF00027C60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fuelPrices.entitlements; sourceTree = "<group>"; };
@@ -48,9 +51,12 @@
 		E3A316DE2BCD3DF00027C60D /* fuelPricesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fuelPricesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A316E22BCD3DF00027C60D /* fuelPricesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelPricesUITests.swift; sourceTree = "<group>"; };
 		E3A316E42BCD3DF00027C60D /* fuelPricesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelPricesUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E3A316F42BCD3EA30027C60D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		E3A316F62BCD3EEC0027C60D /* stationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stationStructure.swift; sourceTree = "<group>"; };
-		E3A316F92BCE6EB40027C60D /* fuelProviderDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelProviderDict.swift; sourceTree = "<group>"; };
+		E3A316F42BCD3EA30027C60D /* StationDataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataGetter.swift; sourceTree = "<group>"; };
+		E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataStructure.swift; sourceTree = "<group>"; };
+		E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelProviderDictionary.swift; sourceTree = "<group>"; };
+		E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataStructure.swift; sourceTree = "<group>"; };
+		E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPriceStructure.swift; sourceTree = "<group>"; };
+		E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLocationStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,7 @@
 		E3A316C52BCD3DEF0027C60D /* fuelPrices */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316C62BCD3DEF0027C60D /* fuelPricesApp.swift */,
+				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
 				E3A316C82BCD3DEF0027C60D /* ContentView.swift */,
 				E3A316CA2BCD3DF00027C60D /* Assets.xcassets */,
 				E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */,
@@ -141,7 +147,7 @@
 		E3A316F12BCD3E1E0027C60D /* services */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F42BCD3EA30027C60D /* APIService.swift */,
+				E3A316F42BCD3EA30027C60D /* StationDataGetter.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -149,7 +155,10 @@
 		E3A316F32BCD3E740027C60D /* models */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F62BCD3EEC0027C60D /* stationStructure.swift */,
+				E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */,
+				E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */,
+				E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */,
+				E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -157,7 +166,7 @@
 		E3A316F82BCE6E5B0027C60D /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F92BCE6EB40027C60D /* fuelProviderDict.swift */,
+				E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -293,10 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */,
-				E3A316F52BCD3EA30027C60D /* APIService.swift in Sources */,
-				E3A316C72BCD3DEF0027C60D /* fuelPricesApp.swift in Sources */,
-				E3A316F72BCD3EEC0027C60D /* stationStructure.swift in Sources */,
-				E3A316FA2BCE6EB40027C60D /* fuelProviderDict.swift in Sources */,
+				E3A316F52BCD3EA30027C60D /* StationDataGetter.swift in Sources */,
+				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
+				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
+				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
+				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
+				E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */,
+				E3A316FA2BCE6EB40027C60D /* FuelProviderDictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

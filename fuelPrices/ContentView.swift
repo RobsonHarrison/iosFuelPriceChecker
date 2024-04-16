@@ -10,9 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var isDataFetched = false
     @State private var postcode = ""
-    @State private var stations: [Station] = []
-   
-    let stationDataGetter = StationDataGetter()
+    @State private var stationDataGetter = StationDataGetter()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -28,7 +27,7 @@ struct ContentView: View {
             Button("Fetch Data") {
                             stationDataGetter.getStationData {
                                 self.isDataFetched = true
-                                self.stations = stationDataGetter.stations
+                                
                             }
                         }.buttonStyle(.bordered)
             
