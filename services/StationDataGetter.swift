@@ -11,8 +11,9 @@ import Foundation
 class StationDataGetter {
         
     var responses: [ResponseData] = []
+    var filteredStations: [StationData] = []
         
-    func getStationData(completion: @escaping () -> Void) {
+    func getStationData(for postcode: SearchPostcode, completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
 
         for (fuelProvider, jsonUrl) in FuelProviderDictionary.fuelProviders {
@@ -49,6 +50,27 @@ class StationDataGetter {
    
         dispatchGroup.notify(queue: .main) {
             completion()
+            self.filterStationData(for: postcode)
+          
         }
     }
-}
+    
+    func filterStationData(for postcode: SearchPostcode) {
+        let searchPostcode = postcode.searchPostcode
+        responses.forEach { response in
+            response.stations.forEach { station in
+                if station.postcode.hasPrefix(searchPostcode) {
+                    print(station)
+                    filteredStations.append(station)
+                }
+            }
+        }
+        
+    }
+
+    }
+
+ 
+
+
+

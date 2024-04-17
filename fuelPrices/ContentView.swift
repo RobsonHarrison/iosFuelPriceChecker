@@ -18,14 +18,16 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Fuel Price")
+            Text((postcode))
             
             TextField("Enter Postcode", text: $postcode)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
-                        
+
                             
             Button("Fetch Data") {
-                            stationDataGetter.getStationData {
+                let searchPostcode = SearchPostcode(searchPostcode: postcode)
+                stationDataGetter.getStationData(for: searchPostcode) {
                                 self.isDataFetched = true
                                 
                             }
@@ -35,15 +37,10 @@ struct ContentView: View {
                             Text("Data fetched successfully!")
                                 .foregroundColor(.blue)
                         }
-            
-            
+
         }
-        
-        
-        
-        .padding()
+     .padding()
     }
-    
        }
 
 

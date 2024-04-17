@@ -20,6 +20,7 @@
 		E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */; };
 		E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */; };
 		E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */; };
+		E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataStructure.swift; sourceTree = "<group>"; };
 		E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPriceStructure.swift; sourceTree = "<group>"; };
 		E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLocationStructure.swift; sourceTree = "<group>"; };
+		E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostcodeStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */,
 				E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */,
 				E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */,
+				E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				E3A316F52BCD3EA30027C60D /* StationDataGetter.swift in Sources */,
 				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
 				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
+				E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */,
 				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
 				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
 				E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */,
