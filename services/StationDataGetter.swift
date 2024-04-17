@@ -60,11 +60,11 @@ class StationDataGetter {
         responses.forEach { response in
             response.stations.forEach { station in
                 if station.postcode.hasPrefix(searchPostcode) {
-                    print(station)
                     filteredStations.append(station)
                 }
             }
         }
+        print(filteredStations)
         
     }
 
