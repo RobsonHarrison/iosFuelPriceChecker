@@ -9,26 +9,26 @@ import Foundation
 
 
 class StationDataGetter {
-        
+    
     var responses: [ResponseData] = []
     var filteredStations: [StationData] = []
-        
+    
     func getStationData(for postcode: SearchPostcode, completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
-
+        
         for (fuelProvider, jsonUrl) in FuelProviderDictionary.fuelProviders {
             guard let url = URL(string: jsonUrl) else {
                 print("Invalid URL for \(fuelProvider): \(jsonUrl)")
                 continue
             }
-
+            
             dispatchGroup.enter()
-
+            
             let task = URLSession.shared.dataTask(with: url) { [self] data, response, error in
                 defer {
                     dispatchGroup.leave()
                 }
-
+                
                 if let error = error {
                     print("Error downloading data for \(fuelProvider) from \(url): \(error)")
                     return
@@ -47,11 +47,11 @@ class StationDataGetter {
             }
             task.resume()
         }
-   
+        
         dispatchGroup.notify(queue: .main) {
             completion()
             self.filterStationData(for: postcode)
-          
+            
         }
     }
     
@@ -60,17 +60,20 @@ class StationDataGetter {
         responses.forEach { response in
             response.stations.forEach { station in
                 if station.postcode.hasPrefix(searchPostcode) {
-                    filteredStations.append(station)
+                    if !filteredStations.contains(where: { $0.site_id == station.site_id }){
+                        filteredStations.append(station)
+                        
+                    }
                 }
             }
         }
         print(filteredStations)
         
     }
+    
+}
 
-    }
 
- 
 
 
 

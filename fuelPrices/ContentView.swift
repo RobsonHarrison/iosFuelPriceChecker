@@ -21,27 +21,27 @@ struct ContentView: View {
             Text((postcode))
             
             TextField("Enter Postcode", text: $postcode)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding()
-
-                            
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            
             Button("Fetch Data") {
                 let searchPostcode = SearchPostcode(searchPostcode: postcode)
                 stationDataGetter.getStationData(for: searchPostcode) {
-                                self.isDataFetched = true
-                                
-                            }
-                        }.buttonStyle(.bordered)
+                    self.isDataFetched = true
+                    
+                }
+            }.buttonStyle(.bordered)
             
             if isDataFetched {
-                            Text("Data fetched successfully!")
-                                .foregroundColor(.blue)
-                        }
-
+                Text("Data fetched successfully!")
+                    .foregroundColor(.blue)
+            }
+            
         }
-     .padding()
+        .padding()
     }
-       }
+}
 
 
 #Preview {

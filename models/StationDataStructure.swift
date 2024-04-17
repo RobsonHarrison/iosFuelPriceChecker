@@ -8,6 +8,7 @@
 import Foundation
 
 struct StationData: Decodable{
+    let site_id: String
     let brand: String
     let address: String
     let postcode: String
