@@ -8,7 +8,7 @@
 import Foundation
 
 struct StationLocation: Decodable {
-    let latitude: Decimal
-    let longitude: Decimal
+    let latitude: Double
+    let longitude: Double
     
 }

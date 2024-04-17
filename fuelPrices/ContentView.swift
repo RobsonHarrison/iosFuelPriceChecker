@@ -36,6 +36,37 @@ struct ContentView: View {
             if isDataFetched {
                 Text("Data fetched successfully!")
                     .foregroundColor(.blue)
+         
+                let stationsBrand = Dictionary(grouping: stationDataGetter.filteredStations, by: { $0.brand })
+
+          
+                let formattedPrices = stationsBrand.map { brand, stations in
+                    var formattedText = "\(brand):\n"
+                    
+                    for station in stations {
+                        if let e10Price = station.prices.E10 {
+                            formattedText += "  Unleaded (E10): \(e10Price)\n"
+                        }
+                        
+                        if let e5Price = station.prices.E5 {
+                            formattedText += "  Unleaded (E5): \(e5Price)\n"
+                        }
+                        
+                        if let b7Price = station.prices.B7 {
+                            formattedText += "  Diesel: \(b7Price)\n"
+                        }
+                    }
+                    
+                    return formattedText
+                }
+
+                // Join the formatted prices and display
+                Text(formattedPrices.joined(separator: "\n"))
+
+
+
+            
+                
             }
             
         }
