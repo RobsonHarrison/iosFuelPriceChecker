@@ -34,66 +34,9 @@ struct ContentView: View {
             }.buttonStyle(.bordered)
             
             if isDataFetched {
-                Text("Data fetched successfully!")
-                    .foregroundColor(.blue)
-                
-                //                Remove to own view file
-                
-                VStack(alignment: .leading) {
-                    ForEach(stationDataGetter.filteredStations, id: \.self) { item in
-                        Text("\(item.brand)")
-                            .font(.title)
-                        
-                        HStack {
-                            VStack(alignment: .leading) {
-                                if let e10Price = item.prices.E10 {
-                                    Text("Unleaded (E10):")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                                if let e5Price = item.prices.E5 {
-                                    Text("Unleaded (E5):")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                                if let b7Price = item.prices.B7 {
-                                    Text("Diesel:")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                            
-                            Spacer()
-                            
-                            VStack(alignment: .trailing) {
-                                if let e10Price = item.prices.E10 {
-                                    Text("\(e10Price)")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                                if let e5Price = item.prices.E5 {
-                                    Text("\(e5Price)")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                                if let b7Price = item.prices.B7 {
-                                    Text("\(b7Price)")
-                                        .font(.subheadline)
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                        }
-                        Divider()
-                    }
-                }
-
-                
-                //                Code end
-                
-                
+                StationPriceListView(filteredStations: stationDataGetter.filteredStations)
             }
-            
-            
+ 
         }
         .padding()
     }

@@ -56,7 +56,7 @@ class StationDataGetter {
     }
     
     func filterStationData(for postcode: SearchPostcode) {
-        let searchPostcode = postcode.searchPostcode
+        let searchPostcode = postcode.searchPostcode.uppercased()
         responses.forEach { response in
             response.stations.forEach { station in
                 if station.postcode.hasPrefix(searchPostcode) {
