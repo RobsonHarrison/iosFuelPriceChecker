@@ -36,38 +36,63 @@ struct ContentView: View {
             if isDataFetched {
                 Text("Data fetched successfully!")
                     .foregroundColor(.blue)
-         
-                let stationsBrand = Dictionary(grouping: stationDataGetter.filteredStations, by: { $0.brand })
-
-          
-                let formattedPrices = stationsBrand.map { brand, stations in
-                    var formattedText = "\(brand):\n"
-                    
-                    for station in stations {
-                        if let e10Price = station.prices.E10 {
-                            formattedText += "  Unleaded (E10): \(e10Price)\n"
-                        }
+                
+                //                Remove to own view file
+                
+                VStack(alignment: .leading) {
+                    ForEach(stationDataGetter.filteredStations, id: \.self) { item in
+                        Text("\(item.brand)")
+                            .font(.title)
                         
-                        if let e5Price = station.prices.E5 {
-                            formattedText += "  Unleaded (E5): \(e5Price)\n"
+                        HStack {
+                            VStack(alignment: .leading) {
+                                if let e10Price = item.prices.E10 {
+                                    Text("Unleaded (E10):")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                                if let e5Price = item.prices.E5 {
+                                    Text("Unleaded (E5):")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                                if let b7Price = item.prices.B7 {
+                                    Text("Diesel:")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                            
+                            Spacer()
+                            
+                            VStack(alignment: .trailing) {
+                                if let e10Price = item.prices.E10 {
+                                    Text("\(e10Price)")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                                if let e5Price = item.prices.E5 {
+                                    Text("\(e5Price)")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                                if let b7Price = item.prices.B7 {
+                                    Text("\(b7Price)")
+                                        .font(.subheadline)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
                         }
-                        
-                        if let b7Price = station.prices.B7 {
-                            formattedText += "  Diesel: \(b7Price)\n"
-                        }
+                        Divider()
                     }
-                    
-                    return formattedText
                 }
 
-                // Join the formatted prices and display
-                Text(formattedPrices.joined(separator: "\n"))
-
-
-
-            
+                
+                //                Code end
+                
                 
             }
+            
             
         }
         .padding()

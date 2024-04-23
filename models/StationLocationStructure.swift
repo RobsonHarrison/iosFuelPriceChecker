@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StationLocation: Decodable {
+struct StationLocation: Decodable, Hashable {
     let latitude: Double
     let longitude: Double
     
