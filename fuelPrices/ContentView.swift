@@ -14,18 +14,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Fuel Price")
-            Text((postcode))
             
-            TextField("Enter Postcode", text: $postcode)
+            Image(.logo)
+                .resizable()
+                .scaledToFit()
+            
+            TextField("Enter the first part of your Postcode", text: $postcode)
+                .multilineTextAlignment(.center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+                .onChange(of: postcode) { userInput in
+                    if userInput.count > 4 {
+                        postcode = String(userInput.prefix(4))
+                    }
+                }
             
             
-            Button("Fetch Data") {
+            
+            
+            Button("Search Prices") {
                 let searchPostcode = SearchPostcode(searchPostcode: postcode)
                 stationDataGetter.getStationData(for: searchPostcode) {
                     self.isDataFetched = true
@@ -34,9 +41,10 @@ struct ContentView: View {
             }.buttonStyle(.bordered)
             
             if isDataFetched {
-                StationPriceListView(filteredStations: stationDataGetter.filteredStations)
+                PriceListView(filteredStations: stationDataGetter.filteredStations)
+                MapView(filteredStations: stationDataGetter.filteredStations)
             }
- 
+            
         }
         .padding()
     }

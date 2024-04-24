@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E36EF0AD2BD8101200879359 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0AC2BD8101200879359 /* MapView.swift */; };
 		E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */; };
 		E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C82BCD3DEF0027C60D /* ContentView.swift */; };
 		E3A316CB2BCD3DF00027C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CA2BCD3DF00027C60D /* Assets.xcassets */; };
@@ -21,7 +22,7 @@
 		E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */; };
 		E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */; };
 		E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */; };
-		E3C144892BD7B7D100781F4B /* StationPriceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C144882BD7B7D100781F4B /* StationPriceListView.swift */; };
+		E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C144882BD7B7D100781F4B /* PriceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E36EF0AC2BD8101200879359 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E3A316C32BCD3DEF0027C60D /* fuelPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fuelPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricesApp.swift; sourceTree = "<group>"; };
 		E3A316C82BCD3DEF0027C60D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPriceStructure.swift; sourceTree = "<group>"; };
 		E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLocationStructure.swift; sourceTree = "<group>"; };
 		E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostcodeStructure.swift; sourceTree = "<group>"; };
-		E3C144882BD7B7D100781F4B /* StationPriceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPriceListView.swift; sourceTree = "<group>"; };
+		E3C144882BD7B7D100781F4B /* PriceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,8 @@
 		E36EF0A92BD7FA0D00879359 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				E3C144882BD7B7D100781F4B /* StationPriceListView.swift */,
+				E3C144882BD7B7D100781F4B /* PriceListView.swift */,
+				E36EF0AC2BD8101200879359 /* MapView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -318,10 +321,11 @@
 				E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */,
 				E3A316F52BCD3EA30027C60D /* StationDataGetter.swift in Sources */,
 				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
+				E36EF0AD2BD8101200879359 /* MapView.swift in Sources */,
 				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
 				E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */,
 				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
-				E3C144892BD7B7D100781F4B /* StationPriceListView.swift in Sources */,
+				E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */,
 				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
 				E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */,
 				E3A316FA2BCE6EB40027C60D /* FuelProviderDictionary.swift in Sources */,
