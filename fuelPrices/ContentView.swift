@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var isDataFetched = false
     @State private var postcode = ""
     @State private var stationDataGetter = StationDataGetter()
+    @State private var filteredStations: [StationData] = []
     
     var body: some View {
         VStack {
@@ -19,6 +20,12 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFit()
                 .padding()
+                .onAppear {
+                    stationDataGetter.getStationData() {
+                        self.isDataFetched = true
+                        print("Fetch Complete")
+                    }
+                }
             
             TextField("Enter the first part of your Postcode", text: $postcode)
                 .multilineTextAlignment(.center)
@@ -32,16 +39,15 @@ struct ContentView: View {
             
             Button("Search Prices") {
                 let searchPostcode = SearchPostcode(searchPostcode: postcode)
-                stationDataGetter.getStationData(for: searchPostcode) {
-                    self.isDataFetched = true
-                    
-                }
-            }.buttonStyle(.bordered)
+                stationDataGetter.filterStationData(for: searchPostcode)
+                filteredStations = stationDataGetter.filteredStations
+            }.buttonStyle(.bordered).disabled(!isDataFetched)
             
-            if isDataFetched {
-                PriceListView(filteredStations: stationDataGetter.filteredStations)
-                MapView(filteredStations: stationDataGetter.filteredStations)
+            if filteredStations.count > 0 {
+                PriceListView(filteredStations: filteredStations)
+                MapView(filteredStations: filteredStations)
             }
+            
             
         }
         .padding()
