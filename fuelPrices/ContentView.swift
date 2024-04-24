@@ -18,6 +18,7 @@ struct ContentView: View {
             Image(.logo)
                 .resizable()
                 .scaledToFit()
+                .padding()
             
             TextField("Enter the first part of your Postcode", text: $postcode)
                 .multilineTextAlignment(.center)
@@ -28,9 +29,6 @@ struct ContentView: View {
                         postcode = String(userInput.prefix(4))
                     }
                 }
-            
-            
-            
             
             Button("Search Prices") {
                 let searchPostcode = SearchPostcode(searchPostcode: postcode)
