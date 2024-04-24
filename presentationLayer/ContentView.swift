@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var isDataFetched = false
     @State private var postcode = ""
-    @State private var stationDataGetter = StationDataGetter()
-    @State private var filteredStations: [StationData] = []
+    @ObservedObject private var stationDataGetter = StationDataGetter()
     
     var body: some View {
         VStack {
@@ -22,8 +21,10 @@ struct ContentView: View {
                 .padding()
                 .onAppear {
                     stationDataGetter.getStationData() {
-                        self.isDataFetched = true
-                        print("Fetch Complete")
+                        DispatchQueue.main.async{
+                            self.isDataFetched = true
+                            print("Fetch Complete")
+                        }
                     }
                 }
             
@@ -40,21 +41,15 @@ struct ContentView: View {
             Button("Search Prices") {
                 let searchPostcode = SearchPostcode(searchPostcode: postcode)
                 stationDataGetter.filterStationData(for: searchPostcode)
-                filteredStations = stationDataGetter.filteredStations
             }.buttonStyle(.bordered).disabled(!isDataFetched)
             
-            if filteredStations.count > 0 {
-                PriceListView(filteredStations: filteredStations)
-                MapView(filteredStations: filteredStations)
+            if stationDataGetter.filteredStations.count > 0 {
+                PriceListView(filteredStations: stationDataGetter.filteredStations)
+                MapView(filteredStations: stationDataGetter.filteredStations)
             }
             
             
         }
         .padding()
     }
-}
-
-
-#Preview {
-    ContentView()
 }

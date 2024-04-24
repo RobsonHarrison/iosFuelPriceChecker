@@ -17,7 +17,7 @@ struct MapView: View {
             RoundedRectangle(cornerRadius: 5)
             
             Map() {
-                ForEach(filteredStations, id: \.self) { station in
+                ForEach(filteredStations, id: \.site_id) { station in
                     Marker(station.brand.uppercased(), systemImage: "fuelpump", coordinate: CLLocationCoordinate2D(latitude: station.location.latitude, longitude: station.location.longitude))
                         .tint(.green)
                 }

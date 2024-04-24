@@ -8,10 +8,10 @@
 import Foundation
 
 
-class StationDataGetter {
+class StationDataGetter: ObservableObject {
     
     var responses: [ResponseData] = []
-    var filteredStations: [StationData] = []
+    @Published var filteredStations: [StationData] = []
     
     func getStationData(completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
@@ -55,18 +55,24 @@ class StationDataGetter {
     
     func filterStationData(for postcode: SearchPostcode) {
         let searchPostcode = postcode.searchPostcode.uppercased()
+        guard !searchPostcode.isEmpty else {
+            filteredStations.removeAll()
+            return
+        }
         filteredStations.removeAll()
-        responses.forEach { response in
-            response.stations.forEach { station in
+        var tempFilteredStations = [StationData]()
+        for response in responses {
+            for station in response.stations {
                 if station.postcode.hasPrefix(searchPostcode) {
-                    if !filteredStations.contains(where: { $0.site_id == station.site_id }){
-                        filteredStations.append(station)
-                        
+                    if !tempFilteredStations.contains(where: { $0.site_id == station.site_id }){
+                        tempFilteredStations.append(station)
                     }
                 }
             }
         }
+        filteredStations = tempFilteredStations
     }
+
     
 }
 

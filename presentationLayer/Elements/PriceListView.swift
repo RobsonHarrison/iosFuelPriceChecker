@@ -14,7 +14,8 @@ struct PriceListView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
-                ForEach(filteredStations, id: \.self) { station in
+                
+                ForEach(filteredStations, id: \.site_id) { station in
                     VStack(alignment: .leading, spacing: 5) {
                         Text("\(station.brand.uppercased())")
                             .font(.title)
