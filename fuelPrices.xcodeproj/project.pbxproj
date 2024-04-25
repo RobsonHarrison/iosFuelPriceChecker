@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C40BD882BDAE1CB0096BD1D /* PostcodeCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */; };
+		0C40BD8A2BDAE4790096BD1D /* PostcodeCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40BD892BDAE4790096BD1D /* PostcodeCheckerView.swift */; };
 		E36EF0AD2BD8101200879359 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0AC2BD8101200879359 /* MapView.swift */; };
 		E36EF0B12BDA4ED100879359 /* StationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B02BDA4ED100879359 /* StationDataManager.swift */; };
 		E36EF0B32BDA4F2E00879359 /* StationDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */; };
@@ -36,7 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostcodeCheckerView.swift; path = Elements/PostcodeCheckerView.swift; sourceTree = "<group>"; };
+		0C40BD892BDAE4790096BD1D /* PostcodeCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeCheckerView.swift; sourceTree = "<group>"; };
 		E36EF0AC2BD8101200879359 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E36EF0B02BDA4ED100879359 /* StationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataManager.swift; sourceTree = "<group>"; };
 		E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataAPI.swift; sourceTree = "<group>"; };
@@ -75,22 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E36EF0A92BD7FA0D00879359 /* Elements */ = {
+		E36EF0A92BD7FA0D00879359 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C40BD892BDAE4790096BD1D /* PostcodeCheckerView.swift */,
 				E3C144882BD7B7D100781F4B /* PriceListView.swift */,
 				E36EF0AC2BD8101200879359 /* MapView.swift */,
 			);
-			path = Elements;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E36EF0AE2BD953C800879359 /* presentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E36EF0A92BD7FA0D00879359 /* Elements */,
 				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
 				E3A316C82BCD3DEF0027C60D /* ContentView.swift */,
-				0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */,
+				E36EF0A92BD7FA0D00879359 /* Views */,
 				E3A316CA2BCD3DF00027C60D /* Assets.xcassets */,
 				E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */,
 				E3A316CD2BCD3DF00027C60D /* Preview Content */,
@@ -277,8 +277,8 @@
 				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
 				E36EF0AD2BD8101200879359 /* MapView.swift in Sources */,
 				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
+				0C40BD8A2BDAE4790096BD1D /* PostcodeCheckerView.swift in Sources */,
 				E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */,
-				0C40BD882BDAE1CB0096BD1D /* PostcodeCheckerView.swift in Sources */,
 				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
 				E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */,
 				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
