@@ -21,6 +21,18 @@ struct PriceListView: View {
                             .font(.title)
                         Text("\(station.postcode.uppercased())")
                             .font(.caption)
+                        Button(action: {
+                            let url = URL(string: "http://maps.apple.com/?q=\(station.location.latitude),\(station.location.longitude)")!
+                            UIApplication.shared.open(url)
+                        }) {
+                            HStack {
+                                Image(systemName: "car.circle")
+                                    .foregroundColor(.blue)
+                                Text("Open in Maps")
+                                    .font(.caption)
+                            }
+                            .foregroundColor(.blue)
+                        }
                         
                         HStack {
                             VStack(alignment: .leading) {
