@@ -10,10 +10,10 @@ Welcome to **FuelPrice**, an iOS app developed using Swift. This project is part
 
 ## Screenshots :camera:
 
-![UI]((https://github.com/RobsonHarrison/iosFuelPriceChecker/blob/main/Screenshots/UI.png))
+![UI](https://raw.githubusercontent.com/RobsonHarrison/iosFuelPriceChecker/main/Screenshots/UI.png)
 *An example of the User Interface without data.*
 
-![UI - With Data]((https://github.com/RobsonHarrison/iosFuelPriceChecker/blob/main/Screenshots/UI%20with%20data.png))
+![UI - With data](https://raw.githubusercontent.com/RobsonHarrison/iosFuelPriceChecker/main/Screenshots/UI%20with%20data.png)
 *An example of the User Interface after a user has searched a postcode and data has been returned.*
 
 ## Project Status :construction:
