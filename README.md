@@ -8,6 +8,14 @@ Welcome to **FuelPrice**, an iOS app developed using Swift. This project is part
 - Processes data within the app :gear:
 - Allows users to filter and search using the first part of their postcode :mag:
 
+## Screenshots :camera:
+
+![UI]((https://github.com/RobsonHarrison/iosFuelPriceChecker/blob/main/Screenshots/UI.png))
+*An example of the User Interface without data.*
+
+![UI - With Data]((https://github.com/RobsonHarrison/iosFuelPriceChecker/blob/main/Screenshots/UI%20with%20data.png))
+*An example of the User Interface after a user has searched a postcode and data has been returned.*
+
 ## Project Status :construction:
 
 This project is a work in progress. As I am using this project to help with my knowledge development, features may change on a frequent basis until a stable version is available.
