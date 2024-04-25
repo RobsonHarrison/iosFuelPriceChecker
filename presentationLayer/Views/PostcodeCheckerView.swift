@@ -9,8 +9,7 @@ import SwiftUI
 
 struct PostcodeCheckerView: View {
     
-    @ObservedObject private var stationDataAPI = StationDataAPI()
-    @ObservedObject private var stationDataManager = StationDataManager()
+    @ObservedObject private var stationDataManager = PricesNearMeFinder()
     
     var body: some View {
         VStack {
@@ -20,10 +19,9 @@ struct PostcodeCheckerView: View {
                 .scaledToFit()
                 .padding()
                 .onAppear {
-                    stationDataAPI.getStationData() {
-                        DispatchQueue.main.async{
-                            
-                        }
+                    stationDataManager.getStationData() {
+                        // TODO: this should store the data returnd to us. Move this code to the view model.
+                        // TODO: an image should never trigger a network request
                     }
                 }
             
@@ -39,8 +37,8 @@ struct PostcodeCheckerView: View {
             
             Button("Search Prices") {
                 let searchPostcode = SearchPostcode(searchPostcode: stationDataManager.postcode)
-                stationDataManager.filterStationData(for: searchPostcode, responses: stationDataAPI.responses)
-            }.buttonStyle(.bordered).disabled(!stationDataAPI.isDataFetched)
+                stationDataManager.filterStationData(for: searchPostcode, responses: stationDataManager.stationDataAPI.responses)
+            }.buttonStyle(.bordered).disabled(!stationDataManager.stationDataAPI.isDataFetched)
             
             if stationDataManager.filteredStations.count > 0 {
                 PriceListView(filteredStations: stationDataManager.filteredStations)

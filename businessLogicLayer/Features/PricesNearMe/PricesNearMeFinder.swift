@@ -7,10 +7,18 @@
 
 import Foundation
 
-class StationDataManager: ObservableObject {
+class PricesNearMeFinder: ObservableObject {
     @Published var postcode = ""
     @Published var filteredStations: [StationData] = []
+    @Published var stationDataAPI: StationDataAPI = StationDataAPI()
     
+    func getStationData(completion: @escaping () -> Void) {
+        stationDataAPI.getStationData() {
+            DispatchQueue.main.async{
+                completion()
+            }
+        }
+    }
     
     func filterStationData(for postcode: SearchPostcode, responses: [ResponseData]) {
         let searchPostcode = postcode.searchPostcode.uppercased()
