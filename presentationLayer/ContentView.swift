@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isDataFetched = false
-    @State private var postcode = ""
-    @ObservedObject private var stationDataGetter = StationDataGetter()
+    
+    @ObservedObject private var stationDataAPI = StationDataAPI()
+    @ObservedObject private var stationDataManager = StationDataManager()
     
     var body: some View {
         VStack {
@@ -20,32 +20,31 @@ struct ContentView: View {
                 .scaledToFit()
                 .padding()
                 .onAppear {
-                    stationDataGetter.getStationData() {
+                    stationDataAPI.getStationData() {
                         DispatchQueue.main.async{
-                            self.isDataFetched = true
-                            print("Fetch Complete")
+                            
                         }
                     }
                 }
             
-            TextField("Enter the first part of your Postcode", text: $postcode)
+            TextField("Enter the first part of your Postcode", text: $stationDataManager.postcode)
                 .multilineTextAlignment(.center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-                .onChange(of: postcode) { userInput in
+                .onChange(of: stationDataManager.postcode) { userInput in
                     if userInput.count > 4 {
-                        postcode = String(userInput.prefix(4))
+                        stationDataManager.postcode = String(userInput.prefix(4))
                     }
                 }
             
             Button("Search Prices") {
-                let searchPostcode = SearchPostcode(searchPostcode: postcode)
-                stationDataGetter.filterStationData(for: searchPostcode)
-            }.buttonStyle(.bordered).disabled(!isDataFetched)
+                let searchPostcode = SearchPostcode(searchPostcode: stationDataManager.postcode)
+                stationDataManager.filterStationData(for: searchPostcode, responses: stationDataAPI.responses)
+            }.buttonStyle(.bordered).disabled(!stationDataAPI.isDataFetched)
             
-            if stationDataGetter.filteredStations.count > 0 {
-                PriceListView(filteredStations: stationDataGetter.filteredStations)
-                MapView(filteredStations: stationDataGetter.filteredStations)
+            if stationDataManager.filteredStations.count > 0 {
+                PriceListView(filteredStations: stationDataManager.filteredStations)
+                MapView(filteredStations: stationDataManager.filteredStations)
             }
             
             
