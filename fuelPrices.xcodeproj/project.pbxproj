@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C40BD882BDAE1CB0096BD1D /* PostcodeCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */; };
 		E36EF0AD2BD8101200879359 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0AC2BD8101200879359 /* MapView.swift */; };
 		E36EF0B12BDA4ED100879359 /* StationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B02BDA4ED100879359 /* StationDataManager.swift */; };
 		E36EF0B32BDA4F2E00879359 /* StationDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostcodeCheckerView.swift; path = Elements/PostcodeCheckerView.swift; sourceTree = "<group>"; };
 		E36EF0AC2BD8101200879359 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E36EF0B02BDA4ED100879359 /* StationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataManager.swift; sourceTree = "<group>"; };
 		E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataAPI.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				E36EF0A92BD7FA0D00879359 /* Elements */,
 				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
 				E3A316C82BCD3DEF0027C60D /* ContentView.swift */,
+				0C40BD872BDAE1CB0096BD1D /* PostcodeCheckerView.swift */,
 				E3A316CA2BCD3DF00027C60D /* Assets.xcassets */,
 				E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */,
 				E3A316CD2BCD3DF00027C60D /* Preview Content */,
@@ -275,6 +278,7 @@
 				E36EF0AD2BD8101200879359 /* MapView.swift in Sources */,
 				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
 				E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */,
+				0C40BD882BDAE1CB0096BD1D /* PostcodeCheckerView.swift in Sources */,
 				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
 				E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */,
 				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
@@ -423,10 +427,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = presentationLayer/fuelPrices.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"presentationLayer/Preview Content\"";
-				DEVELOPMENT_TEAM = SBZ937SM3L;
+				DEVELOPMENT_TEAM = AE3J8T4WV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fuel Price Checker";
@@ -462,10 +467,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = presentationLayer/fuelPrices.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"presentationLayer/Preview Content\"";
-				DEVELOPMENT_TEAM = SBZ937SM3L;
+				DEVELOPMENT_TEAM = AE3J8T4WV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fuel Price Checker";
