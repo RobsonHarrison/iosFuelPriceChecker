@@ -9,47 +9,37 @@ import Foundation
 
 class StationDataAPI: ObservableObject {
     
-    @Published var isDataFetched = false
-    var responses: [ResponseData] = []
+    // MARK: - Error Codes
     
-    func getStationData(completion: @escaping () -> Void) {
-        let dispatchGroup = DispatchGroup()
-        
-        for (fuelProvider, jsonUrl) in FuelProviderDictionary.fuelProviders {
-            guard let url = URL(string: jsonUrl) else {
-                print("Invalid URL for \(fuelProvider): \(jsonUrl)")
-                continue
+    enum StationDataAPIError: Error {
+        case noDataRecieved
+        case networkingError(Error)
+        case jsonDecodingError
+    }
+    
+    // MARK: - Network Calls
+    
+    func requestStationData(from url: URL, completion: @escaping (Result<ResponseData, StationDataAPIError>) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error downloading data from \(url): \(error)")
+                completion(.failure(.networkingError(error)))
+                return
+            }
+            guard let data = data else {
+                print("Error: No data received from \(url)")
+                completion(.failure(.noDataRecieved))
+                return
             }
             
-            dispatchGroup.enter()
-            
-            let task = URLSession.shared.dataTask(with: url) { [self] data, response, error in
-                defer {
-                    dispatchGroup.leave()
-                }
-                
-                if let error = error {
-                    print("Error downloading data for \(fuelProvider) from \(url): \(error)")
-                    return
-                }
-                guard let data = data else {
-                    print("Error: No data received for \(fuelProvider) from \(url)")
-                    return
-                }
-                
-                do {
-                    let responseData = try JSONDecoder().decode(ResponseData.self, from: data)
-                    responses.append(responseData)
-                } catch {
-                    print("Error parsing JSON: \(error)")
-                }
+            do {
+                let responseData = try JSONDecoder().decode(ResponseData.self, from: data)
+                completion(.success(responseData))
+            } catch {
+                print("Error parsing JSON: \(error)")
+                completion(.failure(.jsonDecodingError))
             }
-            task.resume()
         }
-        
-        dispatchGroup.notify(queue: .main) {
-            completion()
-            self.isDataFetched = true
-        }
+        task.resume()
     }
 }
