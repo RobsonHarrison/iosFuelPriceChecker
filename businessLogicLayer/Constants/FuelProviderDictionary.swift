@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FuelProviderDictionary {
+struct FuelProviderDictionary { // The name suggests its a Dictionary, but it isnt. Remove the postfix.
     
     static let fuelProviders: [String: String] = [
         "Applegreen UK": "https://applegreenstores.com/fuel-prices/data.json",

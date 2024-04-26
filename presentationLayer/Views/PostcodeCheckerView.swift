@@ -9,8 +9,10 @@ import SwiftUI
 
 struct PostcodeCheckerView: View {
     
-    @ObservedObject private var stationDataManager = PricesNearMeFinder()
+    // It's nice to name this variable "viewModel" as all developers will immeditely understand what it is used for!
+    @ObservedObject private var viewModel = PostcodeCheckerViewModel()
     
+    // It's nice how empty this view is and how little code exists for it. Afterall, its just the View and doesn't contain any business logic or "decisions" etc.
     var body: some View {
         VStack {
             
@@ -18,34 +20,22 @@ struct PostcodeCheckerView: View {
                 .resizable()
                 .scaledToFit()
                 .padding()
-                .onAppear {
-                    stationDataManager.getStationData() {
-                        // TODO: this should store the data returnd to us. Move this code to the view model.
-                        // TODO: an image should never trigger a network request
-                    }
-                }
             
-            TextField("Enter the first part of your Postcode", text: $stationDataManager.postcode)
+            TextField("Enter the first part of your Postcode", text: $viewModel.postcode)
                 .multilineTextAlignment(.center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-                .onChange(of: stationDataManager.postcode) { userInput in
-                    if userInput.count > 4 {
-                        stationDataManager.postcode = String(userInput.prefix(4))
-                    }
-                }
             
             Button("Search Prices") {
-                let searchPostcode = SearchPostcode(searchPostcode: stationDataManager.postcode)
-                stationDataManager.filterStationData(for: searchPostcode, responses: stationDataManager.stationDataAPI.responses)
-            }.buttonStyle(.bordered).disabled(!stationDataManager.stationDataAPI.isDataFetched)
-            
-            if stationDataManager.filteredStations.count > 0 {
-                PriceListView(filteredStations: stationDataManager.filteredStations)
-                MapView(filteredStations: stationDataManager.filteredStations)
+                viewModel.fetchData() // This view is DUMB and only "knows" about the view model. It knows nothing else about the underlying system, which means it would be very easy to create a similar view specifically for the AppleWatch etc. 😃
             }
+            .buttonStyle(.bordered)
+            .disabled(viewModel.isRefreshing)
             
-            
+            if viewModel.filteredStations.count > 0 {
+                PriceListView(filteredStations: viewModel.filteredStations)
+                MapView(filteredStations: viewModel.filteredStations)
+            }
         }
         .padding()
     }

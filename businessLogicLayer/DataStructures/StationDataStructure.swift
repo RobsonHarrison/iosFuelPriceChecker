@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StationData: Decodable, Hashable{
+struct StationData: Decodable, Hashable {
     let site_id: String
     let brand: String
     let address: String
