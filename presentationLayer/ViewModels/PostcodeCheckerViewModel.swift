@@ -10,7 +10,7 @@ import Foundation
 class PostcodeCheckerViewModel: ObservableObject {
     
     // properties for the UI View to "bind" to
-    @Published var filteredStations: [StationData] = []
+    @Published var filteredStations: [PetrolStation] = []
     var postcode: String = ""
     var isRefreshing: Bool { // the ViewModel is the only API (interface) that should be visible to the View, so we wrap this value. i.e. we never want to write code where we are chaining down through the layers of architecture - ❌ viewModel.stationDataManager.isRefreshingData // ✅ viewModel.isRefreshingData
         stationDataManager.isRefreshingData

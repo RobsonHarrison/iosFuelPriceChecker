@@ -20,7 +20,7 @@ class StationDataManager: ObservableObject {
     private(set) var isRefreshingData = false
     // No layer above this class should know that StationDataAPI exists as a service.
     private var stationDataAPI = StationDataAPI()
-    private var stationLibrary: [StationData] = []
+    private var stationLibrary: [PetrolStation] = []
     
     // MARK: - Constructor
     
@@ -31,7 +31,7 @@ class StationDataManager: ObservableObject {
     
     // MARK: - Publicly available functions / features (make it easy-to-use)
     
-    func getStationData(forPostcode postcode: String, completion: @escaping (Result<[StationData], StationDataManagerError>) -> Void) {
+    func getStationData(forPostcode postcode: String, completion: @escaping (Result<[PetrolStation], StationDataManagerError>) -> Void) {
         guard isRefreshingData == false else {
             // Note: ALWAYS call your completion handlers in 100% of scenarios 😉
             completion(.failure(.refreshAlreadyInProgress))
@@ -58,7 +58,7 @@ class StationDataManager: ObservableObject {
     
     // MARK: - Gathering data from StationDataAPI
     
-    func gatherStationData(from endPointAddresses: [String], completion: @escaping (Result<[StationData], StationDataManagerError>) -> Void) {
+    func gatherStationData(from endPointAddresses: [String], completion: @escaping (Result<[PetrolStation], StationDataManagerError>) -> Void) {
         let stationDataAPI = self.stationDataAPI
         let dispatchGroup = DispatchGroup()
         var responses: [ResponseData] = []
@@ -94,11 +94,11 @@ class StationDataManager: ObservableObject {
                 return
             }
             // amend the responses to provide a list of all found stations.
-            let allStations: [StationData] = responses.flatMap{ $0.stations }
+            let allStations: [PetrolStation] = responses.flatMap{ $0.stations }
             
             // Remove duplicate stations from array. This is efficient because we only iterate through the array once and it's done at the time of reciving the data too
             var registeredSiteIDs: Set<String> = []
-            let stationsWithoutDuplicates: [StationData] = allStations.compactMap { stationData in
+            let stationsWithoutDuplicates: [PetrolStation] = allStations.compactMap { stationData in
                 guard registeredSiteIDs.contains(stationData.site_id) == false else {
                     return nil // removes the duplicate from the array
                 }
@@ -111,8 +111,8 @@ class StationDataManager: ObservableObject {
     
     // MARK: - Filtering via postcode
     
-    private func filterStations(_ stations: [StationData], forPostcode postcode: String) -> [StationData] {
-        var filteredStations = [StationData]()
+    private func filterStations(_ stations: [PetrolStation], forPostcode postcode: String) -> [PetrolStation] {
+        var filteredStations = [PetrolStation]()
         for station in stations {
             if station.postcode.uppercased().hasPrefix(postcode.uppercased()) {
                 filteredStations.append(station)

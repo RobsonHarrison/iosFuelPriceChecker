@@ -9,5 +9,5 @@ import Foundation
 
 struct ResponseData: Decodable{
     let last_updated: String
-    let stations: [StationData]
+    let stations: [PetrolStation]
 }
