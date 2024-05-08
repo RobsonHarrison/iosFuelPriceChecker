@@ -1,5 +1,5 @@
 //
-//  FuelProviderDictionary.swift
+//  FuelSuppliers.swift
 //  fuelPrices
 //
 //  Created by Robson Harrison on 16/04/2024.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct FuelProviderDictionary {
+struct FuelSuppliers {
     
-    static let fuelProviders: [String: String] = [
+    static let supplierURLs: [String: String] = [
         "Applegreen UK": "https://applegreenstores.com/fuel-prices/data.json",
         "Ascona Group": "https://fuelprices.asconagroup.co.uk/newfuel.json",
         "Asda": "https://storelocator.asda.com/fuel_prices_data.json",

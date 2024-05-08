@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PriceListView: View {
     
-    var filteredStations: [StationData]
+    var filteredStations: [FuelStation]
     
     var body: some View {
         ScrollView {

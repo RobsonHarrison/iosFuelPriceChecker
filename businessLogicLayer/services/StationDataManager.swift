@@ -9,17 +9,17 @@ import Foundation
 
 class StationDataManager: ObservableObject {
     @Published var postcode = ""
-    @Published var filteredStations: [StationData] = []
+    @Published var filteredStations: [FuelStation] = []
     
     
-    func filterStationData(for postcode: SearchPostcode, responses: [ResponseData]) {
+    func filterStationData(for postcode: SearchPostcode, responses: [FuelSupplierResponse]) {
         let searchPostcode = postcode.searchPostcode.uppercased()
         guard !searchPostcode.isEmpty else {
             filteredStations.removeAll()
             return
         }
         filteredStations.removeAll()
-        var tempFilteredStations = [StationData]()
+        var tempFilteredStations = [FuelStation]()
         for response in responses {
             for station in response.stations {
                 if station.postcode.hasPrefix(searchPostcode) {

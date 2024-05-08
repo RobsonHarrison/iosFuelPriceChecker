@@ -10,12 +10,12 @@ import Foundation
 class StationDataAPI: ObservableObject {
     
     @Published var isDataFetched = false
-    var responses: [ResponseData] = []
+    var responses: [FuelSupplierResponse] = []
     
     func getStationData(completion: @escaping () -> Void) {
         let dispatchGroup = DispatchGroup()
         
-        for (fuelProvider, jsonUrl) in FuelProviderDictionary.fuelProviders {
+        for (fuelProvider, jsonUrl) in FuelSuppliers.supplierURLs {
             guard let url = URL(string: jsonUrl) else {
                 print("Invalid URL for \(fuelProvider): \(jsonUrl)")
                 continue
@@ -38,7 +38,7 @@ class StationDataAPI: ObservableObject {
                 }
                 
                 do {
-                    let responseData = try JSONDecoder().decode(ResponseData.self, from: data)
+                    let responseData = try JSONDecoder().decode(FuelSupplierResponse.self, from: data)
                     responses.append(responseData)
                 } catch {
                     print("Error parsing JSON: \(error)")

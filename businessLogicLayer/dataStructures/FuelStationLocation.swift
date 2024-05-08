@@ -1,5 +1,5 @@
 //
-//  StationLocationStructure.swift
+//  FuelStationLocation.swift
 //  fuelPrices
 //
 //  Created by Robson Harrison on 16/04/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StationLocation: Decodable, Hashable {
+struct FuelStationLocation: Decodable, Hashable {
     let latitude: Double
     let longitude: Double
     
@@ -18,8 +18,8 @@ struct StationLocation: Decodable, Hashable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        latitude = try StationLocation.decodeCoordinate(from: container, forKey: .latitude)
-        longitude = try StationLocation.decodeCoordinate(from: container, forKey: .longitude)
+        latitude = try FuelStationLocation.decodeCoordinate(from: container, forKey: .latitude)
+        longitude = try FuelStationLocation.decodeCoordinate(from: container, forKey: .longitude)
     }
     
     private static func decodeCoordinate(from container: KeyedDecodingContainer<CodingKeys>, forKey key: CodingKeys) throws -> Double {
