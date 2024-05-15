@@ -256,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "FuelPriceChecker" */;
+			buildConfigurationList = E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "Fuel Price Checker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -574,7 +574,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "FuelPriceChecker" */ = {
+		E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "Fuel Price Checker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3A316E62BCD3DF00027C60D /* Debug */,
