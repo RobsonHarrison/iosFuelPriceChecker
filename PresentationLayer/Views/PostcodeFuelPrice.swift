@@ -23,11 +23,13 @@ struct PostcodeFuelPrice: View {
                    .multilineTextAlignment(.center)
                    .textFieldStyle(RoundedBorderTextFieldStyle())
                    .padding()
+                   .autocapitalization(.allCharacters)
                
                Button("Search Prices") {
                    viewModel.fetchData() 
                }
-               .buttonStyle(.bordered)
+               .buttonStyle(.borderedProminent)
+               .tint(Color(red: 1.0/255.0, green: 127.0/255.0, blue: 113.0/255.0))
                .disabled(viewModel.isFetchingData)
                
                if viewModel.filteredFuelStation.count > 0 {
