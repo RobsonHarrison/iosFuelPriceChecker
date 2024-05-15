@@ -1,5 +1,5 @@
 //
-//  StationPriceList.swift
+//  PriceListView.swift
 //  fuelPrices
 //
 //  Created by Robson Harrison on 23/04/2024.
