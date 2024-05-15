@@ -1,5 +1,5 @@
 //
-//  ResponseDataStructure.swift
+//  FuelSupplierResponse.swift
 //  fuelPrices
 //
 //  Created by Robson Harrison on 16/04/2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ResponseData: Decodable{
+struct FuelSupplierResponse: Decodable{
     let last_updated: String
-    let stations: [StationData]
+    let stations: [FuelStation]
 }

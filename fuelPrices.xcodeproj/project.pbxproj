@@ -15,12 +15,12 @@
 		E3A316CB2BCD3DF00027C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CA2BCD3DF00027C60D /* Assets.xcassets */; };
 		E3A316CF2BCD3DF00027C60D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CE2BCD3DF00027C60D /* Preview Assets.xcassets */; };
 		E3A316D92BCD3DF00027C60D /* fuelPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */; };
-		E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */; };
-		E3A316FA2BCE6EB40027C60D /* FuelProviderDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */; };
-		E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */; };
-		E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */; };
-		E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */; };
-		E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */; };
+		E3A316F72BCD3EEC0027C60D /* FuelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F62BCD3EEC0027C60D /* FuelStation.swift */; };
+		E3A316FA2BCE6EB40027C60D /* FuelSuppliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */; };
+		E3A316FC2BCEC0310027C60D /* FuelSupplierResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FB2BCEC0310027C60D /* FuelSupplierResponse.swift */; };
+		E3A316FE2BCEC04B0027C60D /* FuelStationPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FD2BCEC04B0027C60D /* FuelStationPrice.swift */; };
+		E3A317002BCEC0780027C60D /* FuelStationLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FF2BCEC0780027C60D /* FuelStationLocation.swift */; };
+		E3A317022BCFD5F80027C60D /* SearchPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A317012BCFD5F80027C60D /* SearchPostcode.swift */; };
 		E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C144882BD7B7D100781F4B /* PriceListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +46,12 @@
 		E3A316CE2BCD3DF00027C60D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3A316D42BCD3DF00027C60D /* fuelPricesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fuelPricesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelPricesTests.swift; sourceTree = "<group>"; };
-		E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataStructure.swift; sourceTree = "<group>"; };
-		E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelProviderDictionary.swift; sourceTree = "<group>"; };
-		E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDataStructure.swift; sourceTree = "<group>"; };
-		E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPriceStructure.swift; sourceTree = "<group>"; };
-		E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLocationStructure.swift; sourceTree = "<group>"; };
-		E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostcodeStructure.swift; sourceTree = "<group>"; };
+		E3A316F62BCD3EEC0027C60D /* FuelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStation.swift; sourceTree = "<group>"; };
+		E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelSuppliers.swift; sourceTree = "<group>"; };
+		E3A316FB2BCEC0310027C60D /* FuelSupplierResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelSupplierResponse.swift; sourceTree = "<group>"; };
+		E3A316FD2BCEC04B0027C60D /* FuelStationPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationPrice.swift; sourceTree = "<group>"; };
+		E3A316FF2BCEC0780027C60D /* FuelStationLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationLocation.swift; sourceTree = "<group>"; };
+		E3A317012BCFD5F80027C60D /* SearchPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPostcode.swift; sourceTree = "<group>"; };
 		E3C144882BD7B7D100781F4B /* PriceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +82,10 @@
 			path = Elements;
 			sourceTree = "<group>";
 		};
-		E36EF0AE2BD953C800879359 /* presentationLayer */ = {
+		E36EF0AE2BD953C800879359 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E37933B62BEBC849003AB44E /* Views */,
 				E36EF0A92BD7FA0D00879359 /* Elements */,
 				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
 				E3A316C82BCD3DEF0027C60D /* ContentView.swift */,
@@ -92,24 +93,39 @@
 				E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */,
 				E3A316CD2BCD3DF00027C60D /* Preview Content */,
 			);
-			path = presentationLayer;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		E36EF0AF2BD9541200879359 /* businessLogicLayer */ = {
+		E36EF0AF2BD9541200879359 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F82BCE6E5B0027C60D /* resources */,
-				E3A316F32BCD3E740027C60D /* models */,
-				E3A316F12BCD3E1E0027C60D /* services */,
+				E3A316F82BCE6E5B0027C60D /* Resources */,
+				E3A316F32BCD3E740027C60D /* DataStructures */,
+				E3A316F12BCD3E1E0027C60D /* Services */,
 			);
-			path = businessLogicLayer;
+			path = BusinessLogicLayer;
+			sourceTree = "<group>";
+		};
+		E37933B52BEBB935003AB44E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E37933B62BEBC849003AB44E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E3A316BA2BCD3DEF0027C60D = {
 			isa = PBXGroup;
 			children = (
-				E36EF0AE2BD953C800879359 /* presentationLayer */,
-				E36EF0AF2BD9541200879359 /* businessLogicLayer */,
+				E36EF0AE2BD953C800879359 /* PresentationLayer */,
+				E36EF0AF2BD9541200879359 /* BusinessLogicLayer */,
 				E3A316D72BCD3DF00027C60D /* testingLayer */,
 				E3A316C42BCD3DEF0027C60D /* Products */,
 			);
@@ -140,33 +156,33 @@
 			path = testingLayer;
 			sourceTree = "<group>";
 		};
-		E3A316F12BCD3E1E0027C60D /* services */ = {
+		E3A316F12BCD3E1E0027C60D /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E36EF0B02BDA4ED100879359 /* StationDataManager.swift */,
 				E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */,
 			);
-			path = services;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		E3A316F32BCD3E740027C60D /* models */ = {
+		E3A316F32BCD3E740027C60D /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F62BCD3EEC0027C60D /* StationDataStructure.swift */,
-				E3A316FB2BCEC0310027C60D /* ResponseDataStructure.swift */,
-				E3A316FD2BCEC04B0027C60D /* StationPriceStructure.swift */,
-				E3A316FF2BCEC0780027C60D /* StationLocationStructure.swift */,
-				E3A317012BCFD5F80027C60D /* SearchPostcodeStructure.swift */,
+				E3A316F62BCD3EEC0027C60D /* FuelStation.swift */,
+				E3A316FB2BCEC0310027C60D /* FuelSupplierResponse.swift */,
+				E3A316FD2BCEC04B0027C60D /* FuelStationPrice.swift */,
+				E3A316FF2BCEC0780027C60D /* FuelStationLocation.swift */,
+				E3A317012BCFD5F80027C60D /* SearchPostcode.swift */,
 			);
-			path = models;
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
-		E3A316F82BCE6E5B0027C60D /* resources */ = {
+		E3A316F82BCE6E5B0027C60D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F92BCE6EB40027C60D /* FuelProviderDictionary.swift */,
+				E37933B52BEBB935003AB44E /* Constants */,
 			);
-			path = resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,14 +289,14 @@
 				E36EF0B32BDA4F2E00879359 /* StationDataAPI.swift in Sources */,
 				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
 				E36EF0AD2BD8101200879359 /* MapView.swift in Sources */,
-				E3A316F72BCD3EEC0027C60D /* StationDataStructure.swift in Sources */,
-				E3A317022BCFD5F80027C60D /* SearchPostcodeStructure.swift in Sources */,
-				E3A316FE2BCEC04B0027C60D /* StationPriceStructure.swift in Sources */,
+				E3A316F72BCD3EEC0027C60D /* FuelStation.swift in Sources */,
+				E3A317022BCFD5F80027C60D /* SearchPostcode.swift in Sources */,
+				E3A316FE2BCEC04B0027C60D /* FuelStationPrice.swift in Sources */,
 				E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */,
-				E3A317002BCEC0780027C60D /* StationLocationStructure.swift in Sources */,
-				E3A316FC2BCEC0310027C60D /* ResponseDataStructure.swift in Sources */,
+				E3A317002BCEC0780027C60D /* FuelStationLocation.swift in Sources */,
+				E3A316FC2BCEC0310027C60D /* FuelSupplierResponse.swift in Sources */,
 				E36EF0B12BDA4ED100879359 /* StationDataManager.swift in Sources */,
-				E3A316FA2BCE6EB40027C60D /* FuelProviderDictionary.swift in Sources */,
+				E3A316FA2BCE6EB40027C60D /* FuelSuppliers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"presentationLayer/Preview Content\"";
-				DEVELOPMENT_TEAM = SBZ937SM3L;
+				DEVELOPMENT_TEAM = T9G2YF8X7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fuel Price Checker";
@@ -441,12 +457,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robsonharrison.fuelPrices;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson-harrison.fuelPrices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -465,7 +481,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"presentationLayer/Preview Content\"";
-				DEVELOPMENT_TEAM = SBZ937SM3L;
+				DEVELOPMENT_TEAM = T9G2YF8X7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Fuel Price Checker";
@@ -480,12 +496,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.robsonharrison.fuelPrices;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robson-harrison.fuelPrices";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

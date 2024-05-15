@@ -11,7 +11,7 @@ import MapKit
 struct MapView: View {
     
     @State private var position: MapCameraPosition = .automatic
-    var filteredStations: [StationData]
+    var filteredStations: [FuelStation]
     
     var body: some View {
         ZStack {
