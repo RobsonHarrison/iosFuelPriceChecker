@@ -12,10 +12,10 @@ class PostcodeFuelPriceViewModel: ObservableObject {
     @Published var filteredFuelStation: [FuelStation] = []
     var filterPostcode: String = ""
     var isFetchingData: Bool {
-        FuelStationDataManager.isFetchingData
+        fuelStationDataManager.isFetchingData
     }
     
-    private var FuelStationDataManager = FuelStationDataManager(fuelSuppliers: FuelSuppliers.supplierURLs)
+    private var fuelStationDataManager = FuelStationDataManager(supplierURLs: FuelSuppliers.supplierURLs)
     
     func fetchData() {
            guard
@@ -24,10 +24,10 @@ class PostcodeFuelPriceViewModel: ObservableObject {
            else {
                return
            }
-        FuelStationDataManager.getStationData(forPostcode: filterPostcode) { result in
+        fuelStationDataManager.getFuelStationData(forPostcode: filterPostcode) { result in
                switch result {
                case .success(let stations):
-                   self.filteredStations = stations
+                   self.filteredFuelStation = stations
                case .failure(let error):
                    break
                    // TODO: What do you want to do in the event of an error?

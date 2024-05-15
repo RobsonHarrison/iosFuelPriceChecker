@@ -11,7 +11,7 @@ import os.log
 class FuelStationDataManager: ObservableObject {
     
     enum FuelStationDataAPIError: Error {
-        case FuelStationDataAPIError (FuelStationDataAPI.FuelStationDataAPIError)
+        case fuelStationDataAPIError (FuelStationDataAPI.FuelStationDataAPIError)
         case dataFetchAlreadyInProgress
     }
     
