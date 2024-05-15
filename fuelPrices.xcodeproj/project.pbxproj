@@ -82,9 +82,10 @@
 			path = Elements;
 			sourceTree = "<group>";
 		};
-		E36EF0AE2BD953C800879359 /* presentationLayer */ = {
+		E36EF0AE2BD953C800879359 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E37933B62BEBC849003AB44E /* Views */,
 				E36EF0A92BD7FA0D00879359 /* Elements */,
 				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
 				E3A316C82BCD3DEF0027C60D /* ContentView.swift */,
@@ -92,32 +93,39 @@
 				E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */,
 				E3A316CD2BCD3DF00027C60D /* Preview Content */,
 			);
-			path = presentationLayer;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		E36EF0AF2BD9541200879359 /* businessLogicLayer */ = {
+		E36EF0AF2BD9541200879359 /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316F82BCE6E5B0027C60D /* resources */,
-				E3A316F32BCD3E740027C60D /* dataStructures */,
-				E3A316F12BCD3E1E0027C60D /* services */,
+				E3A316F82BCE6E5B0027C60D /* Resources */,
+				E3A316F32BCD3E740027C60D /* DataStructures */,
+				E3A316F12BCD3E1E0027C60D /* Services */,
 			);
-			path = businessLogicLayer;
+			path = BusinessLogicLayer;
 			sourceTree = "<group>";
 		};
-		E37933B52BEBB935003AB44E /* constants */ = {
+		E37933B52BEBB935003AB44E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */,
 			);
-			path = constants;
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		E37933B62BEBC849003AB44E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E3A316BA2BCD3DEF0027C60D = {
 			isa = PBXGroup;
 			children = (
-				E36EF0AE2BD953C800879359 /* presentationLayer */,
-				E36EF0AF2BD9541200879359 /* businessLogicLayer */,
+				E36EF0AE2BD953C800879359 /* PresentationLayer */,
+				E36EF0AF2BD9541200879359 /* BusinessLogicLayer */,
 				E3A316D72BCD3DF00027C60D /* testingLayer */,
 				E3A316C42BCD3DEF0027C60D /* Products */,
 			);
@@ -148,16 +156,16 @@
 			path = testingLayer;
 			sourceTree = "<group>";
 		};
-		E3A316F12BCD3E1E0027C60D /* services */ = {
+		E3A316F12BCD3E1E0027C60D /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				E36EF0B02BDA4ED100879359 /* StationDataManager.swift */,
 				E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */,
 			);
-			path = services;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		E3A316F32BCD3E740027C60D /* dataStructures */ = {
+		E3A316F32BCD3E740027C60D /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
 				E3A316F62BCD3EEC0027C60D /* FuelStation.swift */,
@@ -166,15 +174,15 @@
 				E3A316FF2BCEC0780027C60D /* FuelStationLocation.swift */,
 				E3A317012BCFD5F80027C60D /* SearchPostcode.swift */,
 			);
-			path = dataStructures;
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
-		E3A316F82BCE6E5B0027C60D /* resources */ = {
+		E3A316F82BCE6E5B0027C60D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E37933B52BEBB935003AB44E /* constants */,
+				E37933B52BEBB935003AB44E /* Constants */,
 			);
-			path = resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
