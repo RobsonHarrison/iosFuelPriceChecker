@@ -29,7 +29,8 @@ class FuelStationDataManager: ObservableObject {
     // MARK: - Public Functions
     
     func getFuelStationData(forPostcode postcode: String, completion: @escaping (Result<[FuelStation], FuelStationDataAPIError>) -> Void) {
-        guard isFetchingData == false else {
+        guard isFetchingData == false,
+        postcode.count >= 3 else {
             completion(.failure(.dataFetchAlreadyInProgress))
             return
         }

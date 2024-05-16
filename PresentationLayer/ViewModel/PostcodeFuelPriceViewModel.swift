@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 
 class PostcodeFuelPriceViewModel: ObservableObject {
     
@@ -19,7 +20,6 @@ class PostcodeFuelPriceViewModel: ObservableObject {
     
     func fetchData() {
            guard
-            filterPostcode.count >= 3, // business logic. This could be moved into stationDataManager.getStationData 🤔
             isFetchingData == false
            else {
                return
