@@ -45,6 +45,8 @@ class FuelStationDataManager: ObservableObject {
                     let filteredResults = self.filterStations(stations, forPostcode: postcode)
                     completion(.success(filteredResults))
                 case .failure(let error):
+                    let errorMessage = "Failed to fetch fuel station data: \(error)"
+                    Logger.logNetworkError(errorMessage, error: error)
                     completion(result)
                 }
             }
@@ -59,7 +61,6 @@ class FuelStationDataManager: ObservableObject {
         
         for (endpointURL) in endpointURLs {
             guard let url = URL(string: endpointURL) else {
-                os_log("Invalid URL for %@", log: .default, type: .error, endpointURL)
                 continue
             }
             
@@ -73,8 +74,6 @@ class FuelStationDataManager: ObservableObject {
                 case .success(let response):
                     responses.append(response)
                 case .failure(let error):
-                    let errorDescription = "\(url) - \(error)"
-                    os_log("Error fetching data: %@", log: .default, type: .error, errorDescription)
                     errorResponseCount += 1
                     break
                 }
@@ -105,13 +104,13 @@ class FuelStationDataManager: ObservableObject {
     // MARK: - Filtering via postcode
        
        private func filterStations(_ stations: [FuelStation], forPostcode postcode: String) -> [FuelStation] {
-           var filteredStations = [FuelStation]()
-           for station in stations {
-               if station.postcode.uppercased().hasPrefix(postcode.uppercased()) {
-                   filteredStations.append(station)
-               }
-           }
-           return filteredStations
+           let filteredStations = stations.filter { $0.postcode.uppercased().hasPrefix(postcode.uppercased()) }
+                   
+                   if filteredStations.isEmpty {
+                       Logger.logNetworkInfo("No fuel stations found for postcode: \(postcode)")
+                   }
+                   
+                   return filteredStations
        }
     
     

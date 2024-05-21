@@ -24,14 +24,16 @@ class PostcodeFuelPriceViewModel: ObservableObject {
            else {
                return
            }
+        
+
         fuelStationDataManager.getFuelStationData(forPostcode: filterPostcode) { result in
                switch result {
                case .success(let stations):
                    self.filteredFuelStation = stations
+
                case .failure(let error):
-                   break
-                   // TODO: What do you want to do in the event of an error?
-                   // clear the screen? Keep the existing results? Display a dialog or TOAST dialog to the user?
+                let errorMessage = "Failed to fetch fuel station data: \(error)"
+                Logger.logNetworkError(errorMessage, error: error, url: "")
                }
            }
        }
