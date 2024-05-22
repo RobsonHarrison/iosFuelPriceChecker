@@ -45,8 +45,6 @@ class FuelStationDataManager: ObservableObject {
                     let filteredResults = self.filterStations(stations, forPostcode: postcode)
                     completion(.success(filteredResults))
                 case .failure(let error):
-                    let errorMessage = "Failed to fetch fuel station data: \(error)"
-                    Logger.logNetworkError(errorMessage, error: error)
                     completion(result)
                 }
             }
@@ -75,6 +73,7 @@ class FuelStationDataManager: ObservableObject {
                     responses.append(response)
                 case .failure(let error):
                     errorResponseCount += 1
+                    Logger.logNetworkInfo("\(error)", url: endpointURL)
                     break
                 }
             }

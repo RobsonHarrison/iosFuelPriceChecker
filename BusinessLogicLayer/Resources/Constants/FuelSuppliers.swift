@@ -23,6 +23,8 @@ struct FuelSuppliers {
         "Sainsbury's": "https://api.sainsburys.co.uk/v1/exports/latest/fuel_prices_data.json",
         "SGN": "https://www.sgnretail.uk/files/data/SGN_daily_fuel_prices.json",
         "Shell": "https://www.shell.co.uk/fuel-prices-data.html",
-        "Tesco": "https://www.tesco.com/fuel_prices/fuel_prices_data.json"
+        "Tesco": "https://www.tesco.com/fuel_prices/fuel_prices_data.json",
+        "Test": "test",
+        "Error 4o4": "https://www.google.com/404"
     ]
 }
