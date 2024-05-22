@@ -12,6 +12,7 @@ struct Logger {
     private static var subsystem = Bundle.main.bundleIdentifier ?? "com.robson-harrison.fuelPrices"
     
     static let networkLogger = OSLog(subsystem: subsystem, category: "Network")
+    static let systemLogger = OSLog(subsystem: subsystem, category: "Error")
     
     static func logNetworkError(_ message: String, error: Error, url: String? = nil) {
         let urlString = url ?? ""
@@ -21,6 +22,10 @@ struct Logger {
     static func logNetworkInfo(_ message: String, url: String? = nil) {
         let urlString = url ?? ""
         os_log("%{public}@: %{public}@", log: networkLogger, type: .info, message, urlString)
+    }
+    
+    static func logSystemError(_ message: String) {
+        os_log("%{public}@", log: systemLogger, type: .info, message)
     }
     
 }

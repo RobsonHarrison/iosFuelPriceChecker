@@ -107,7 +107,7 @@ class FuelStationDataManager: ObservableObject {
            let filteredStations = stations.filter { $0.postcode.uppercased().hasPrefix(postcode.uppercased()) }
                    
                    if filteredStations.isEmpty {
-                       Logger.logNetworkInfo("No fuel stations found for postcode: \(postcode)")
+                       Logger.logSystemError("No fuel stations found for postcode: \(postcode)")
                    }
                    
                    return filteredStations
