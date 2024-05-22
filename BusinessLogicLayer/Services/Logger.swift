@@ -22,8 +22,8 @@ struct Logger {
         os_log("%{public}@ - %{public}@", log: networkLogger, type: .info, message, url)
     }
     
-    static func logSystemError(_ message: String) {
-        os_log("%{public}@ - %{public}@", log: networkLogger, type: .error, message)
+    static func logSystemError(_ message: String, type: OSLogType) {
+        os_log("%{public}@", log: networkLogger, type: type, message)
     }
     
 }

@@ -71,9 +71,9 @@ class FuelStationDataManager: ObservableObject {
                 switch result {
                 case .success(let response):
                     responses.append(response)
-                case .failure(let error):
+                case .failure(_):
                     errorResponseCount += 1
-                    Logger.logNetworkInfo("\(error)", url: endpointURL)
+                    
                     break
                 }
             }
@@ -106,7 +106,7 @@ class FuelStationDataManager: ObservableObject {
            let filteredStations = stations.filter { $0.postcode.uppercased().hasPrefix(postcode.uppercased()) }
                    
                    if filteredStations.isEmpty {
-                       Logger.logSystemError("No fuel stations found for postcode: \(postcode)")
+                       Logger.logSystemError("No fuel stations found for postcode: \(postcode)", type: .info)
                    }
                    
                    return filteredStations
