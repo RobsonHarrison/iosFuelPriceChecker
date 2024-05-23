@@ -10,7 +10,7 @@ import Foundation
 enum ErrorDefinitions {
     enum UserErrors: Error, CustomStringConvertible {
         case incorrectPostcode
-        case noPostcodeResults
+        case noPostcodeResults(postcode: String)
         case noDataAvailable
         case dataFetchInProgress
 
@@ -18,8 +18,8 @@ enum ErrorDefinitions {
             switch self {
             case .incorrectPostcode:
                 return "Postcode must be at least 3 characters long."
-            case .noPostcodeResults:
-                return "No fuel stations found for your postcode."
+            case let .noPostcodeResults(postcode):
+                return "No fuel stations found for \(postcode)"
             case .noDataAvailable:
                 return "Unable to retrieve information from fuel suppliers. Please try again later."
             case .dataFetchInProgress:

@@ -75,7 +75,7 @@ class FuelStationDataManager: ObservableObject {
                 let filteredResults = self.filterStations(stationsWithoutDuplicates, forPostcode: postcode)
                 if filteredResults.isEmpty {
                     Logger.logSystemError("No fuel stations found for postcode: \(postcode)", type: .info)
-                    completion(.failure(.userErrors(.noPostcodeResults)))
+                    completion(.failure(.userErrors(.noPostcodeResults(postcode: postcode))))
                 } else {
                     completion(.success(filteredResults))
                 }
