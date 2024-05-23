@@ -15,11 +15,13 @@ struct Logger {
     static let systemLogger = OSLog(subsystem: subsystem, category: "Error")
     
     static func logNetworkError(_ message: String, error: Error, url: String) {
+        #if DEBUG
         os_log("%{public}@ - %{public}@ - %{public}@", log: networkLogger, type: .error, message, error.localizedDescription, url)
+        #endif
     }
     
     static func logNetworkInfo(_ message: String, url: String) {
-        os_log("%{public}@ - %{public}@", log: networkLogger, type: .info, message, url)
+        os_log("%{public}@ - %{public}@", log: networkLogger, type: .error, message, url)
     }
     
     static func logSystemError(_ message: String, type: OSLogType) {

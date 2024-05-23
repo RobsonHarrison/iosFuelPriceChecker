@@ -36,6 +36,9 @@ struct PostcodeFuelPrice: View {
                    PriceListView(filteredStations: viewModel.filteredFuelStation)
                    MapView(filteredStations: viewModel.filteredFuelStation)
                }
+               else if let errorMessage = viewModel.errorMessage {
+                   ErrorPromptView(errorMessage: errorMessage)
+               }
            }
            .padding()
        }

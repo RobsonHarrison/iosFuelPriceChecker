@@ -11,6 +11,8 @@ import os.log
 class PostcodeFuelPriceViewModel: ObservableObject {
     
     @Published var filteredFuelStation: [FuelStation] = []
+    @Published var errorMessage: String? = nil
+    
     var filterPostcode: String = ""
     var isFetchingData: Bool {
         fuelStationDataManager.isFetchingData
@@ -32,8 +34,12 @@ class PostcodeFuelPriceViewModel: ObservableObject {
                    self.filteredFuelStation = stations
 
                case .failure(let error):
-                let errorMessage = "Failed to fetch fuel station data: \(error)"
-                Logger.logNetworkError(errorMessage, error: error, url: "")
+                   switch error {
+                   case .userErrors(let userError):
+                       self.errorMessage = userError.description
+                   case .apiErrors(let apiError):
+                       self.errorMessage = apiError.description
+                   }
                }
            }
        }
