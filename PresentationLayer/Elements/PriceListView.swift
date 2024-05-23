@@ -26,6 +26,7 @@ struct PriceListView: View {
                                 Text("Open in Maps")
                                     .font(.caption)
                             }
+                            Text(station.last_updated)
                         }
 
                         .foregroundColor(.blue)
@@ -34,17 +35,22 @@ struct PriceListView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             if station.prices.E10 != nil {
-                                Text("Unleaded (E10):")
+                                Text("Standard Unleaded (E10):")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
                             if station.prices.E5 != nil {
-                                Text("Unleaded (E5):")
+                                Text("Premium Unleaded (E5):")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
                             if station.prices.B7 != nil {
-                                Text("Diesel:")
+                                Text("Standard Diesel:")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            if station.prices.SDV != nil {
+                                Text("Premium Diesel:")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
@@ -65,6 +71,11 @@ struct PriceListView: View {
                             }
                             if let b7Price = station.prices.B7 {
                                 Text("\(b7Price)")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            if let sdvPrice = station.prices.SDV {
+                                Text("\(sdvPrice)")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
