@@ -20,8 +20,9 @@ struct PostcodeFuelPrice: View {
             TextField("Enter the first part of your Postcode", text: $viewModel.filterPostcode)
                 .multilineTextAlignment(.center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
                 .autocapitalization(.allCharacters)
+                .autocorrectionDisabled()
+                .padding()
 
             Button("Search Prices") {
                 viewModel.fetchData()
