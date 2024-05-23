@@ -19,7 +19,7 @@ enum ErrorDefinitions {
             case .incorrectPostcode:
                 return "Postcode must be at least 3 characters long."
             case let .noPostcodeResults(postcode):
-                return "No fuel stations found for \(postcode)"
+                return "No fuel stations found for \(postcode)."
             case .noDataAvailable:
                 return "Unable to retrieve information from fuel suppliers. Please try again later."
             case .dataFetchInProgress:

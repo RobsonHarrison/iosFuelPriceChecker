@@ -34,7 +34,7 @@ class FuelStationDataManager: ObservableObject {
             return
         }
         guard postcode.count >= 3 else {
-            Logger.logSystemError("Invalid postcode length: \(postcode.count)", type: .error)
+            Logger.logSystemError("Invalid postcode length: \(postcode.count).", type: .error)
             completion(.failure(.userErrors(.incorrectPostcode)))
             return
         }
@@ -74,7 +74,7 @@ class FuelStationDataManager: ObservableObject {
                 self.fuelStationLibrary = stationsWithoutDuplicates
                 let filteredResults = self.filterStations(stationsWithoutDuplicates, forPostcode: postcode)
                 if filteredResults.isEmpty {
-                    Logger.logSystemError("No fuel stations found for postcode: \(postcode)", type: .info)
+                    Logger.logSystemError("No fuel stations found for postcode: \(postcode).", type: .info)
                     completion(.failure(.userErrors(.noPostcodeResults(postcode: postcode))))
                 } else {
                     completion(.success(filteredResults))
