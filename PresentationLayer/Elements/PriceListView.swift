@@ -22,9 +22,10 @@ struct PriceListView: View {
                         Link(destination: URL(string: "http://maps.apple.com/?q=\(station.location.latitude),\(station.location.longitude)")!) {
                             HStack {
                                 Image(systemName: "car.circle")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0))
                                 Text("Open in Maps")
                                     .font(.caption)
+                                    .foregroundColor((Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0)))
                             }
                         }
 
