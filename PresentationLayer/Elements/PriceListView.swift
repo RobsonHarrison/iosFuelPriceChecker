@@ -26,7 +26,6 @@ struct PriceListView: View {
                                 Text("Open in Maps")
                                     .font(.caption)
                             }
-                            Text(station.last_updated)
                         }
 
                         .foregroundColor(.blue)
