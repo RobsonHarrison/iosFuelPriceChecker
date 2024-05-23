@@ -19,7 +19,7 @@ struct MapView: View {
             Map(position: $position) {
                 ForEach(filteredStations, id: \.site_id) { station in
                     Marker(station.brand.uppercased(), systemImage: "fuelpump", coordinate: CLLocationCoordinate2D(latitude: station.location.latitude, longitude: station.location.longitude))
-                        .tint(.green)
+                        .tint(Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0))
                 }
             }
             .mapStyle(.standard(elevation: .realistic))
