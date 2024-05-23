@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E36EF0AD2BD8101200879359 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0AC2BD8101200879359 /* MapView.swift */; };
-		E36EF0B12BDA4ED100879359 /* StationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B02BDA4ED100879359 /* StationDataManager.swift */; };
-		E36EF0B32BDA4F2E00879359 /* StationDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */; };
+		E38308F82BF4E5E2003B6EA0 /* PostcodeFuelPriceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38308F72BF4E5E2003B6EA0 /* PostcodeFuelPriceViewModel.swift */; };
+		E38308FA2BF4F1CF003B6EA0 /* FuelStationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38308F92BF4F1CF003B6EA0 /* FuelStationDataManager.swift */; };
+		E38308FC2BF4F1E6003B6EA0 /* FuelStationDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38308FB2BF4F1E6003B6EA0 /* FuelStationDataAPI.swift */; };
+		E38308FE2BF50A12003B6EA0 /* PostcodeFuelPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38308FD2BF50A12003B6EA0 /* PostcodeFuelPrice.swift */; };
 		E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */; };
 		E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C82BCD3DEF0027C60D /* ContentView.swift */; };
 		E3A316CB2BCD3DF00027C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CA2BCD3DF00027C60D /* Assets.xcassets */; };
@@ -36,8 +38,10 @@
 
 /* Begin PBXFileReference section */
 		E36EF0AC2BD8101200879359 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		E36EF0B02BDA4ED100879359 /* StationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataManager.swift; sourceTree = "<group>"; };
-		E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataAPI.swift; sourceTree = "<group>"; };
+		E38308F72BF4E5E2003B6EA0 /* PostcodeFuelPriceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeFuelPriceViewModel.swift; sourceTree = "<group>"; };
+		E38308F92BF4F1CF003B6EA0 /* FuelStationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationDataManager.swift; sourceTree = "<group>"; };
+		E38308FB2BF4F1E6003B6EA0 /* FuelStationDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationDataAPI.swift; sourceTree = "<group>"; };
+		E38308FD2BF50A12003B6EA0 /* PostcodeFuelPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeFuelPrice.swift; sourceTree = "<group>"; };
 		E3A316C32BCD3DEF0027C60D /* fuelPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fuelPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelPricesApp.swift; sourceTree = "<group>"; };
 		E3A316C82BCD3DEF0027C60D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		E36EF0AE2BD953C800879359 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E38308F62BF4E2F8003B6EA0 /* ViewModel */,
 				E37933B62BEBC849003AB44E /* Views */,
 				E36EF0A92BD7FA0D00879359 /* Elements */,
 				E3A316C62BCD3DEF0027C60D /* FuelPricesApp.swift */,
@@ -117,8 +122,17 @@
 		E37933B62BEBC849003AB44E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E38308FD2BF50A12003B6EA0 /* PostcodeFuelPrice.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E38308F62BF4E2F8003B6EA0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E38308F72BF4E5E2003B6EA0 /* PostcodeFuelPriceViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E3A316BA2BCD3DEF0027C60D = {
@@ -159,8 +173,8 @@
 		E3A316F12BCD3E1E0027C60D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E36EF0B02BDA4ED100879359 /* StationDataManager.swift */,
-				E36EF0B22BDA4F2E00879359 /* StationDataAPI.swift */,
+				E38308F92BF4F1CF003B6EA0 /* FuelStationDataManager.swift */,
+				E38308FB2BF4F1E6003B6EA0 /* FuelStationDataAPI.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "fuelPrices" */;
+			buildConfigurationList = E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "Fuel Price Checker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -286,16 +300,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */,
-				E36EF0B32BDA4F2E00879359 /* StationDataAPI.swift in Sources */,
+				E38308FA2BF4F1CF003B6EA0 /* FuelStationDataManager.swift in Sources */,
 				E3A316C72BCD3DEF0027C60D /* FuelPricesApp.swift in Sources */,
 				E36EF0AD2BD8101200879359 /* MapView.swift in Sources */,
 				E3A316F72BCD3EEC0027C60D /* FuelStation.swift in Sources */,
 				E3A317022BCFD5F80027C60D /* SearchPostcode.swift in Sources */,
+				E38308F82BF4E5E2003B6EA0 /* PostcodeFuelPriceViewModel.swift in Sources */,
 				E3A316FE2BCEC04B0027C60D /* FuelStationPrice.swift in Sources */,
 				E3C144892BD7B7D100781F4B /* PriceListView.swift in Sources */,
+				E38308FE2BF50A12003B6EA0 /* PostcodeFuelPrice.swift in Sources */,
+				E38308FC2BF4F1E6003B6EA0 /* FuelStationDataAPI.swift in Sources */,
 				E3A317002BCEC0780027C60D /* FuelStationLocation.swift in Sources */,
 				E3A316FC2BCEC0310027C60D /* FuelSupplierResponse.swift in Sources */,
-				E36EF0B12BDA4ED100879359 /* StationDataManager.swift in Sources */,
 				E3A316FA2BCE6EB40027C60D /* FuelSuppliers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +574,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "fuelPrices" */ = {
+		E3A316BE2BCD3DEF0027C60D /* Build configuration list for PBXProject "Fuel Price Checker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3A316E62BCD3DF00027C60D /* Debug */,
