@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FuelSupplierResponse: Decodable{
+struct FuelSupplierResponse: Decodable {
     let last_updated: String
     let stations: [FuelStation]
 }

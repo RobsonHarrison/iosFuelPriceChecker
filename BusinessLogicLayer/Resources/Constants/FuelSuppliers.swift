@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct FuelSuppliers {
-    
+enum FuelSuppliers {
     static let supplierURLs: [String: String] = [
         "Applegreen UK": "https://applegreenstores.com/fuel-prices/data.json",
         "Ascona Group": "https://fuelprices.asconagroup.co.uk/newfuel.json",
@@ -16,7 +15,7 @@ struct FuelSuppliers {
         "BP": "https://www.bp.com/en_gb/united-kingdom/home/fuelprices/fuel_prices_data.json",
         "Esso Tesco Alliance": "https://fuelprices.esso.co.uk/latestdata.json",
         "Jet Retail UK": "https://jetlocal.co.uk/fuel_prices_data.json",
-         "Morrisons": "https://www.morrisons.com/fuel-prices/fuel.json",
+        "Morrisons": "https://www.morrisons.com/fuel-prices/fuel.json",
         "Moto": "https://moto-way.com/fuel-price/fuel_prices.json",
         "Motor Fuel Group": "https://fuel.motorfuelgroup.com/fuel_prices_data.json",
         "Rontec": "https://www.rontec-servicestations.co.uk/fuel-prices/data/fuel_prices_data.json",
@@ -25,6 +24,6 @@ struct FuelSuppliers {
         "Shell": "https://www.shell.co.uk/fuel-prices-data.html",
         "Tesco": "https://www.tesco.com/fuel_prices/fuel_prices_data.json",
         "Test": "test",
-        "Error 4o4": "https://www.google.com/404"
+        "Error 4o4": "https://www.google.com/404",
     ]
 }
