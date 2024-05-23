@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FuelStation: Decodable, Hashable{
+struct FuelStation: Decodable, Hashable {
     let site_id: String
     let brand: String
     let address: String
@@ -15,8 +15,3 @@ struct FuelStation: Decodable, Hashable{
     let location: FuelStationLocation
     let prices: FuelStationPrice
 }
-
-
-
-
-

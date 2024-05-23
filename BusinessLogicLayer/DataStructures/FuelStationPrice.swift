@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FuelStationPrice: Decodable, Hashable{
+struct FuelStationPrice: Decodable, Hashable {
     let E10: Decimal?
     let B7: Decimal?
     let E5: Decimal?
