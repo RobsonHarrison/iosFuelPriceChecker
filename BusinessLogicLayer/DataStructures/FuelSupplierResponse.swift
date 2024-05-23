@@ -11,3 +11,8 @@ struct FuelSupplierResponse: Decodable {
     let last_updated: String
     let stations: [FuelStation]
 }
+
+struct FuelSupplierResponseDeocding: Decodable {
+    let last_updated: String
+    let stations: [FuelStationDeocding]
+}

@@ -23,7 +23,5 @@ enum FuelSuppliers {
         "SGN": "https://www.sgnretail.uk/files/data/SGN_daily_fuel_prices.json",
         "Shell": "https://www.shell.co.uk/fuel-prices-data.html",
         "Tesco": "https://www.tesco.com/fuel_prices/fuel_prices_data.json",
-        "Test": "test",
-        "Error 4o4": "https://www.google.com/404",
     ]
 }

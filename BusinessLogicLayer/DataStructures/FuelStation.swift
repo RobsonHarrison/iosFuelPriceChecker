@@ -15,3 +15,12 @@ struct FuelStation: Decodable, Hashable {
     let location: FuelStationLocation
     let prices: FuelStationPrice
 }
+
+struct FuelStationDeocding: Decodable, Hashable {
+    let site_id: String?
+    let brand: String?
+    let address: String?
+    let postcode: String?
+    let location: FuelStationLocation?
+    let prices: FuelStationPrice?
+}

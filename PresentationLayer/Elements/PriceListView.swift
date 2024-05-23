@@ -15,7 +15,7 @@ struct PriceListView: View {
             VStack(alignment: .leading, spacing: 10) {
                 ForEach(filteredStations, id: \.site_id) { station in
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("\(station.brand.uppercased())")
+                        Text(station.brand.uppercased())
                             .font(.title)
                         Text("\(station.postcode.uppercased())")
                             .font(.caption)

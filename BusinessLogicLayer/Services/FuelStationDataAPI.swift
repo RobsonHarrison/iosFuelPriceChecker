@@ -39,7 +39,23 @@ class FuelStationDataAPI: ObservableObject {
                 }
 
                 do {
-                    let responseData = try JSONDecoder().decode(FuelSupplierResponse.self, from: data)
+                    let responseDataDecoding = try JSONDecoder().decode(FuelSupplierResponseDeocding.self, from: data)
+
+                    let validatedStations = responseDataDecoding.stations.compactMap { fuelStationDeocding in
+                        if let site_id = fuelStationDeocding.site_id,
+                           let brand = fuelStationDeocding.brand,
+                           let address = fuelStationDeocding.address,
+                           let postcode = fuelStationDeocding.postcode,
+                           let location = fuelStationDeocding.location,
+                           let prices = fuelStationDeocding.prices
+                        {
+                            return FuelStation(site_id: site_id, brand: brand, address: address, postcode: postcode, location: location, prices: prices)
+                        }
+                        return nil
+                    }
+
+                    let responseData = FuelSupplierResponse(last_updated: responseDataDecoding.last_updated, stations: validatedStations)
+
                     completion(.success(responseData))
                 } catch {
                     Logger.logNetworkError(ErrorDefinitions.APIErrors.jsonDecodingError(error).description, error: error, url: urlString)
