@@ -58,22 +58,22 @@ struct PriceListView: View {
                         Spacer()
 
                         VStack(alignment: .trailing) {
-                            if let e10Price = station.prices.E10 {
+                            if let e10Price = station.prices.formattedE10 {
                                 Text("\(e10Price)")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
-                            if let e5Price = station.prices.E5 {
+                            if let e5Price = station.prices.formattedE5 {
                                 Text("\(e5Price)")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
-                            if let b7Price = station.prices.B7 {
+                            if let b7Price = station.prices.formattedB7 {
                                 Text("\(b7Price)")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
                             }
-                            if let sdvPrice = station.prices.SDV {
+                            if let sdvPrice = station.prices.formattedSDV {
                                 Text("\(sdvPrice)")
                                     .font(.subheadline)
                                     .foregroundStyle(.secondary)
