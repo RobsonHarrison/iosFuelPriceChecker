@@ -25,7 +25,7 @@ struct PriceListView: View {
                                     .foregroundColor(Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0))
                                 Text("Open in Maps")
                                     .font(.caption)
-                                    .foregroundColor((Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0)))
+                                    .foregroundColor(Color(red: 1.0 / 255.0, green: 127.0 / 255.0, blue: 113.0 / 255.0))
                             }
                         }
 
