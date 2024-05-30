@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E33910C62C07364700ADE10B /* FuelStationDataAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33910C52C07364700ADE10B /* FuelStationDataAPITest.swift */; };
+		E34910432C00D09C001B143E /* FuelStationDecodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34910422C00D09C001B143E /* FuelStationDecodeTest.swift */; };
 		E35BA5B42BFCE12E00462FA2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BA5B32BFCE12E00462FA2 /* Logger.swift */; };
 		E35BA5B62BFF347D00462FA2 /* ErrorPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BA5B52BFF347D00462FA2 /* ErrorPromptView.swift */; };
 		E35BA5B82BFF386A00462FA2 /* ErrorDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35BA5B72BFF386A00462FA2 /* ErrorDefinitions.swift */; };
@@ -19,7 +21,6 @@
 		E3A316C92BCD3DEF0027C60D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316C82BCD3DEF0027C60D /* ContentView.swift */; };
 		E3A316CB2BCD3DF00027C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CA2BCD3DF00027C60D /* Assets.xcassets */; };
 		E3A316CF2BCD3DF00027C60D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A316CE2BCD3DF00027C60D /* Preview Assets.xcassets */; };
-		E3A316D92BCD3DF00027C60D /* fuelPricesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */; };
 		E3A316F72BCD3EEC0027C60D /* FuelStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F62BCD3EEC0027C60D /* FuelStation.swift */; };
 		E3A316FA2BCE6EB40027C60D /* FuelSuppliers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */; };
 		E3A316FC2BCEC0310027C60D /* FuelSupplierResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A316FB2BCEC0310027C60D /* FuelSupplierResponse.swift */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E33910C52C07364700ADE10B /* FuelStationDataAPITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationDataAPITest.swift; sourceTree = "<group>"; };
+		E34910412C00D09B001B143E /* fuelPricesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fuelPricesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E34910422C00D09C001B143E /* FuelStationDecodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStationDecodeTest.swift; sourceTree = "<group>"; };
 		E35BA5B32BFCE12E00462FA2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E35BA5B52BFF347D00462FA2 /* ErrorPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorPromptView.swift; sourceTree = "<group>"; };
 		E35BA5B72BFF386A00462FA2 /* ErrorDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDefinitions.swift; sourceTree = "<group>"; };
@@ -55,7 +59,6 @@
 		E3A316CC2BCD3DF00027C60D /* fuelPrices.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fuelPrices.entitlements; sourceTree = "<group>"; };
 		E3A316CE2BCD3DF00027C60D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E3A316D42BCD3DF00027C60D /* fuelPricesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fuelPricesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fuelPricesTests.swift; sourceTree = "<group>"; };
 		E3A316F62BCD3EEC0027C60D /* FuelStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelStation.swift; sourceTree = "<group>"; };
 		E3A316F92BCE6EB40027C60D /* FuelSuppliers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelSuppliers.swift; sourceTree = "<group>"; };
 		E3A316FB2BCEC0310027C60D /* FuelSupplierResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelSupplierResponse.swift; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 				E36EF0AF2BD9541200879359 /* BusinessLogicLayer */,
 				E3A316D72BCD3DF00027C60D /* testingLayer */,
 				E3A316C42BCD3DEF0027C60D /* Products */,
+				E34910412C00D09B001B143E /* fuelPricesTests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,7 +177,8 @@
 		E3A316D72BCD3DF00027C60D /* testingLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E3A316D82BCD3DF00027C60D /* fuelPricesTests.swift */,
+				E34910422C00D09C001B143E /* FuelStationDecodeTest.swift */,
+				E33910C52C07364700ADE10B /* FuelStationDataAPITest.swift */,
 			);
 			path = testingLayer;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 					};
 					E3A316D32BCD3DF00027C60D = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = E3A316C22BCD3DEF0027C60D;
 					};
 				};
@@ -332,7 +338,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3A316D92BCD3DF00027C60D /* fuelPricesTests.swift in Sources */,
+				E34910432C00D09C001B143E /* FuelStationDecodeTest.swift in Sources */,
+				E33910C62C07364700ADE10B /* FuelStationDataAPITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,8 +551,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9G2YF8X7C;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -555,6 +564,8 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "fuelPricesTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelPrices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fuelPrices";
@@ -566,8 +577,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T9G2YF8X7C;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -577,6 +590,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "fuelPricesTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelPrices.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fuelPrices";

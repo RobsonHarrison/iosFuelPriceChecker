@@ -20,11 +20,15 @@ enum Logger {
         #endif
     }
 
-    static func logNetworkInfo(_ message: String, url: String) {
-        os_log("%{public}@ - %{public}@", log: networkLogger, type: .error, message, url)
-    }
+    #if DEBUG
+        static func logNetworkInfo(_ message: String, url: String) {
+            os_log("%{public}@ - %{public}@", log: networkLogger, type: .error, message, url)
+        }
+    #endif
 
-    static func logSystemError(_ message: String, type: OSLogType) {
-        os_log("%{public}@", log: networkLogger, type: type, message)
-    }
+    #if DEBUG
+        static func logSystemError(_ message: String, type: OSLogType) {
+            os_log("%{public}@", log: networkLogger, type: type, message)
+        }
+    #endif
 }

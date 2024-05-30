@@ -8,10 +8,14 @@
 import Foundation
 
 class FuelStationDataAPI: ObservableObject {
-    // MARK: - Network Calls
+    private let session: URLSession
+
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
 
     func requestFuelSupplierData(from url: URL, completion: @escaping (Result<FuelSupplierResponse, ErrorDefinitions.APIErrors>) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { data, response, error in
             let urlString = url.absoluteString
 
             if let error = error {

@@ -33,7 +33,7 @@ class FuelStationDataManager: ObservableObject {
             completion(.failure(.userErrors(.dataFetchInProgress)))
             return
         }
-        guard postcode.count >= 3 else {
+        guard postcode.count >= 2 else {
             Logger.logSystemError("Invalid postcode length: \(postcode.count).", type: .error)
             completion(.failure(.userErrors(.incorrectPostcode)))
             return
